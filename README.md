@@ -108,6 +108,11 @@ PINECONE_API_KEY=pinecone API key
 PINECONE_ENV_NAME=us-east-1
 PINECONE_INDEX_NAME=pdf-docs
 ```
+- Open a new terminal cd `/path/to/backend` and activate the `.venv`, use the below command to create new user
+```
+flask --app app.web add-user user@example.com supersecret
+```
+
 in frontend folder, 
 ```cd frontend```
 Then in .env inside frontend folder, paste 
@@ -126,8 +131,10 @@ I will provide some of the credentials in the mail
 -  Clicking on new chat button will open up the new conversation.
 
 
+
+```
 Note - In chat interface on left side is also a pdf viewer where user can view the uploaded docs while having a conversation. I have commented that code because it was giving performance issue if the uploaded file is large.
-You can go to [FILE](frontend/src/page/document-view.tsx) and remove the comment.
+You can go to [FILE](frontend/src/page/document-view.tsx) and remove the comment.```
 
 
 

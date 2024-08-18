@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 
 from app.web.db import db, init_db_command
+from app.web.db.add_user import add_user_command
 from app.web.db import models
 from app.web.config import Config
 from app.web.hooks import load_logged_in_user, handle_error, add_headers
@@ -32,6 +33,7 @@ def create_app():
 def register_extensions(app):
     db.init_app(app)
     app.cli.add_command(init_db_command)
+    app.cli.add_command(add_user_command)
 
 
 def register_blueprints(app):
