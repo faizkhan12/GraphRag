@@ -7,6 +7,7 @@ GraphRag is a standalone application that uses Flask as backend and ReactJS as f
 * [Features](#features)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
+* [Usage](#usage)
 
 
 ## General Information
@@ -36,6 +37,10 @@ Reduce brand guideline misuse
 - Standalone application that one can use any frontend to integrate APIS'
 
 ## ScreenShots
+<img src="screenshots/1.png" />
+<img src="screenshots/2.png" />
+<img src="screenshots/3.png" />
+<img src="screenshots/4.png" />
 
 
 
@@ -91,14 +96,15 @@ inv dev
 
 There are some environment variables that needed for correct functioning of local server. 
 in backend folder,
-```cd backend```
+```cd backend```,
+create .env inside backend folder and paste the followings
+
 ```
-create .env inside backend folder snd paste the followings
 SECRET_KEY=123
-SQLALCHEMY_DATABASE_URI=sqlite:///sqlite.db
+SQLALCHEMY_DATABASE_URI=
 UPLOAD_URL=upload-url
 OPENAI_API_KEY=openAI API key
-PINECONE_API_KEY=pineconde API key
+PINECONE_API_KEY=pinecone API key
 PINECONE_ENV_NAME=us-east-1
 PINECONE_INDEX_NAME=pdf-docs
 ```
@@ -110,21 +116,19 @@ VITE_API_BASE_URL=http://localhost:5173
 ```
 I will provide some of the credentials in the mail
 
+## Usage
+- Initially you need to log in with the credentials on the mail
+- Once logged in, it will open a database with existing uploaded docs.
+- User can upload new document by clicking on upload button at top right
+- User can click on view and will sent to the chat interface
+- In Chat interface, user can chat and ask questions regarding the documents and brand guidelines.
+-There is a history dropdown where user can switch to the past conversations as well.
+-  Clicking on new chat button will open up the new conversation.
 
-### To reset the database
 
-Open a new terminal window and create a new virtual environment:
+Note - In chat interface on left side is also a pdf viewer where user can view the uploaded docs while having a conversation. I have commented that code because it was giving performance issue if the uploaded file is large.
+You can go to [FILE](frontend/src/page/document-view.tsx) and remove the comment.
 
-```
-# On MacOS, WSL, Linux
-source .venv/bin/activate
 
-# On Windows
-.\.venv\Scripts\activate
-```
 
-Then:
 
-```
-flask --app app.web init-db
-```

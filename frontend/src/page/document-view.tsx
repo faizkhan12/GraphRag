@@ -70,13 +70,13 @@ const DocumentPage: React.FC = () => {
         style={{ height: "calc(100vh - 80px)" }}
       >
         {/*
-        comment out the pdfViewer if there is performance issue
+        Remove comment if want to view pdfViewer but there could be performance issue
         */}
-        <div className=" max-w-[60%]">
+        {/* <div className=" max-w-[60%]">
           <PdfViewer url={data.documentUrl} />
-        </div>
+        </div> */}
 
-        <div className="sticky top-0 z-[2000]">
+        <div className="sticky top-0 z-[2000] mx-auto max-w-[60%]">
           <ChatPanel documentId={data.document.id} onSubmit={handleSubmit} />
         </div>
       </div>

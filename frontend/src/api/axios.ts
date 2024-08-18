@@ -7,7 +7,10 @@ interface ApiError {
 }
 
 export const api = axios.create({
-  baseURL: `${import.meta.env.VITE_API_BASE_URL}/api`,
+  baseURL:
+    import.meta.env.MODE !== "development"
+      ? "https://xyz.com/api"
+      : `http://localhost:5173/api`,
 });
 
 export const useApiWithErrorHandling = () => {
