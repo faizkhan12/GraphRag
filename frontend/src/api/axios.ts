@@ -9,7 +9,7 @@ interface ApiError {
 export const api = axios.create({
   baseURL:
     import.meta.env.MODE !== "development"
-      ? "http://graphrag-backend.bluedot.click/api"
+      ? "https://graphrag-backend.bluedot.click/api"
       : `http://localhost:5173/api`,
 });
 
