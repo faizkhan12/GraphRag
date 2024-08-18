@@ -16,6 +16,7 @@ const DocumentsPage: React.FC = () => {
       try {
         const response = await axios.get<Document[]>("/api/pdfs");
         setDocuments(response.data);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         setError("Failed to load documents.");
       }

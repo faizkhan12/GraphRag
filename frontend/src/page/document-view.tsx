@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useChat } from "../store/chat/store";
 import { useSendMessage } from "../store/chat/index";
-import PdfViewer from "../components/pdf-viewer";
 import ChatPanel from "../components/chat/chat-panel";
 import axios from "axios";
 import AuthGuard from "../components/auth-guard";
