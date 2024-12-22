@@ -27,12 +27,12 @@ const Home = () => {
           >
             Login
           </Button>
-          {/* <Button
+          <Button
             onClick={() => navigate("/signup")}
             className="bg-gray-700 text-white hover:bg-gray-800 transition-colors duration-300 transform hover:scale-105"
           >
             Sign Up
-          </Button> */}
+          </Button>
         </div>
       </div>
 

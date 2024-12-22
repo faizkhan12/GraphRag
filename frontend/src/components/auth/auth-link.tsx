@@ -28,12 +28,12 @@ const AuthLink: React.FC = () => {
           >
             Login
           </a>
-          {/* <a
+          <a
             className="font-medium  text-gray-400 hover:text-gray-500 hover:bg-transparent hover:underline"
             href="/signup"
           >
             Sign Up
-          </a> */}
+          </a>
         </>
       )}
     </>
