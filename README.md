@@ -119,12 +119,11 @@ Then in .env inside frontend folder, paste
 ```
 VITE_API_BASE_URL=http://localhost:5173
 ```
-I will provide some of the credentials in the mail
 
 ## Usage
-- Initially you need to log in with the credentials on the mail
-- Once logged in, it will open a database with existing uploaded docs.
-- User can upload new document by clicking on upload button at top right
+- Signup using email and password
+- Once logged in, it will open a dashboard and upload button.
+- User can upload new document by clicking on the upload button at top right
 - User can click on view and will sent to the chat interface
 - In Chat interface, user can chat and ask questions regarding the documents and brand guidelines.
 -There is a history dropdown where user can switch to the past conversations as well.
